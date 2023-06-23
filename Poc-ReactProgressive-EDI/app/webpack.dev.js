@@ -30,7 +30,7 @@ module.exports = merge(common, {
     ],
   },
   devServer: {
-    hot: true,
+    hot: false,
     https: true,
     devMiddleware: {
       writeToDisk: true,

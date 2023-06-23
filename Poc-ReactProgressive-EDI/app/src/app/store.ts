@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { cardLogApi } from '../services';
+// import { cardLogApi } from '../services';
 
 export const store = configureStore({
-  reducer: {
-    [cardLogApi.reducerPath]: cardLogApi.reducer,
-  },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(cardLogApi.middleware),
+  reducer: {},
+  //   reducer: {
+  //     [cardLogApi.reducerPath]: cardLogApi.reducer,
+  //   },
+  //   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(cardLogApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

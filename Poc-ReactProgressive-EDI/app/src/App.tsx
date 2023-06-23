@@ -2,8 +2,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Privacy } from './features/Privacy';
-import { CardLogList } from './features/CardLog';
+import CatFactView from './presentation/CatFactView';
 
 const App = (): JSX.Element => {
   return (
@@ -14,17 +13,15 @@ const App = (): JSX.Element => {
         </Helmet>
         <Router basename="/app">
           <Switch>
-            <Route path="/log">
-              <CardLogList />
-            </Route>
+            <Route path="/log">{/* <CardLogList /> */}</Route>
             <Route path="/the-monster">
               <div>
                 <h1>the-monster</h1>
                 <p>este código está em react (:</p>
               </div>
             </Route>
-            <Route path="/privacy">
-              <Privacy />
+            <Route path="/cat">
+              <CatFactView />
             </Route>
           </Switch>
         </Router>
